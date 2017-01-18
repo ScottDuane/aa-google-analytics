@@ -2,7 +2,7 @@
 
 ## What is Google Analytics? Why should I spend 5 minutes to set it up?
 * It is a web traffic tracking system built by Google that is completely <b>FREE</b>
-* Just create an account and put a piece of Javascript tracking code into your site and it will run with every page of your site
+* Just create an account and put a piece of JavaScript tracking code into your site and it will run with every page of your site
 * Once inserted into your code, the code records how long they were on your site, what device type they used, the number of page views, where they came from, etc.
 
 ## The ABCs of Google Analytics. You should be able to determine:
@@ -18,10 +18,37 @@ For 6 weeks, we tracked students’ full stack projects and these were the resul
 * Sites that are harder to navigate and take longer to load (dyno asleep, ~10 second page load) have a higher bounce rate (90%) and have a longer job search duration (60+ days)
 * As of October 2016, we do not know why a large number of 0 second sessions show up in the data, skewing the bounce rates to appear higher than expected.  Also, keep in mind that your own visits to the site may affect the data.    
 
+Google Analytics **does not** naturaly tell you who the person accessing your site is.  All information is anonymized bfore being displayed, so you can not view visits by IP or any other identifiable information. There are ways around that and we'll cover them ahead.
+
+There are 3 parts to a Google Analytics account:
+* Account: You should have only one of these;
+* Property: The sites you'll register. If you have more than one site that you want to track, and you want to track them sepeprately, you should create two separate properties. **Each property has its own tracking ID and snippet.**
+* View: The information that gets displayed to you. For example, if you have two site that don't need to be in different properties, you can instead create two views: one that displays data for curie.cats.com and the other for markov.cats.com. Make sure you always have one for "All Web Site Data", so you can have a broader picture of your site's usage.
+
+Since our goal is to see how many of your applications are rendering clicks, we won't go fancy and will keep all of our site (FS, JS and flex projects) under one single property.
+
 ## How to Install and Set Up Google Analytics for your FSP/Javascript/Flex:
-* [Watch This Video](https://www.youtube.com/watch?v=Va-b-K5oqYs) (Only watch up to 3:00)  
-* After registering your site, copy and paste Google Analytics snippets to the bottom of the body. On Github, you can insert snippet at end of body on the view application.html.erb
-* Screenshots of students' projects with Google analytics inserted into the code: [Example 1](http://imgur.com/a/QuERY) and [Example 2](http://imgur.com/a/PXwI4)
+* [Watch This Video](https://www.youtube.com/watch?v=Va-b-K5oqYs) (Only watch up to 3:00)
+* After registering your site, copy and paste the Google Analytics snippet to your site, **before the closing `</head>` on your page**. The snippet should be present in whatever page you want to track. This means that:
+    * If it is a **static site**, meaning there's only one HTML file to it, just place it on that single file;
+    * If it is a **dynamic site**, like a Ruby+React SPA, you should make sure your code is in a central file, like the `/app/views/layouts/application.html.erb`. DO NOT copy paste the code on every single HTML/jsx file, since maintaining it becomes a nightmare.
+* See if you didn't break the site on your local. If all is fine, deploy!
+* Example of a student's project with Google Analytics inserted into the code: [Example 1](http://imgur.com/a/PXwI4)
+* The snippets executes asynchronously, so it won't impact your page's performance.
+* For more help, you can check out the [official Google docs](https://support.google.com/analytics/answer/1008080?hl=en).
+
+## Important interface pieces
+Every time you land on the Google Analytics page, you will see an accounts list that has the page you just registered, as well as 4 tabs: 
+* **Home**: Displays the accounts and sites you have;
+* **Reporting**: The main reporting area, where are the graphs and stats are displayed;
+* **Customization**: You can build customized reports from here. We will no be covering this section;
+* **Admin**: Where you view the settings of your whole account (Account, Property and View).
+
+## First things first: Testing your tracking code
+Click on the **Reporting** tab. Then expand the **Real-Time** section and click on **Overview**. You will see how many people are on your site at that moment. Now pop a new tab and go to your site. You should now see yourself on Google Analytics (it might take no more than 10 seconds for you to show up):
+
+**@@@@@ GIF @@@@@**
+
 
 #### Note: After you start sending out applications, recruiters and hiring managers should be clicking on your material. If you notice no one is visiting your site, you may have the code snippet in an invalid location in your code.
 
@@ -43,3 +70,6 @@ For 6 weeks, we tracked students’ full stack projects and these were the resul
 * Although most projects don’t attract this high a volume of users, this data may be useful to demonstrate how Google analytics is useful.
 
 [Screenshot of her Google Analytics](http://imgur.com/a/KWL3h)
+
+## A note on finding extra help
+Back in 2013, Google launched the new version of Analytics called Universal Analytics (UA). The old one was the ga.js and is now flagged as legacy. All of Google's official docs for ga.js have a warning, but you might find older StackOverflow answers that are about ga.js. Make sure you're looking at the right version before trying to implement the answer you're looking at.
