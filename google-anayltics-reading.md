@@ -86,9 +86,9 @@ At a basic level, when a visitor enters the page, the snippet loads and automati
 Now that the snippet is set up, let's make usre it's working properly.
 
 ## First things first: Testing your tracking code
-Click on the **Reporting** tab. Then expand the **Real-Time** section and click on **Overview**. You will see how many people are on your site at that moment. Now pop a new tab and go to your site. You should now see yourself on Google Analytics (it might take no more than 10 seconds for you to show up):
+Click on the **Reporting** tab. Then expand the **Real-Time** section and click on **Overview**. You will see how many people are on your site at that moment. Now pop a new tab and go to your site. You should now see yourself on Google Analytics (it should take no more than 30 seconds for you to show up):
 
-**@@@@@ GIF @@@@@**
+![Testing out the GA snippet](./images/ga_test.gif)
 
 
 #### Note: After you start sending out applications, recruiters and hiring managers should be clicking on your material. If you notice no one is visiting your site, you may have the code snippet in an invalid location in your code. Check its position and Chrome's console for any errors.
@@ -102,7 +102,9 @@ Now that everything is set up, we can filter out our own IP. Don't forget to fil
 * Under **View**, select **Filters** and then **+ ADD FILTER**;
 * Create a new filter of **Predefined** and **Exclude** type and fill in the required params:
 
-**@@@@@ IMAGE @@@@@**
+![Filtering Out IP](./images/ip_filter.jpg)
+
+Make sure you get the correct public IP. Just Google "what's my ip" and you should see it.
 
 Test that you don't show up anymore on the **Real-Time** report. If so, you're all set!
 
