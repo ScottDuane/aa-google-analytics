@@ -70,10 +70,11 @@ As you start seeing numbers increase, it is important to know what these numbers
 * **Bounce rate**- the percentage of single page visits (or web sessions). It is the number of visits in which a person leaves your website from the landing page without browsing any further.
 * **% new sessions**- first time users visiting your website compared to visitors who have previously visited your site
 
+Feel free to explore all sections under **Audience**. We won't be focusing on those, but it's good to know what's available to you.
 
 <a name="utm_params"></a>
 #### 2) **Acquisition:** Where did people come from? This is where we'll see if that recruiter from Google visited your site.
-We'll be leveraging **utm** parameters to help us track who's going to our sites. UTM's are parameters that you append to a site's URL that look like this:
+We'll be leveraging **utm** parameters to help us track who's going to our sites. UTM's are parameters that you append to a site's URL, making it look like this:
 
 [https://www.appacademy.io?utm_source=github&utm_medium=google-analytics-reading](https://www.appacademy.io?utm_source=github&utm_medium=google-analytics-reading)
 
@@ -156,7 +157,34 @@ Now that you see who is coming to your site/app, it's time to see what are they 
 
 **DO NOT CONFUSE `ga()` WITH `ga.js`. The first is the function and the second is the old version of Analytics. The version being used nowadays is called `analytics.js`**
 
+Let's say you want to track a click on a specific link or button. If you have a `handleClick()` function, add the following line:
+```js
+ga('send', 'event', [eventCategory], [eventAction], [eventLabel], [eventValue], [fieldsObject]);
+```
+The function above requires an `eventCategory` and an `eventAction`. `eventLabel` and `eventValue` are optional.
 
+If you want to track a click on one single, specific element, like an `<a>`, you can do:
+```js
+    <a href="/some_page" onClick="ga('send', 'event', 'Test Link', 'test-click', 'link-some-page);">Link to Some Page</a>
+```
+
+You can always add eventListeners to multiple elements too:
+```js
+
+const analyticsClickListener = el => {
+    ga('send', 'event', 'Test Link', 'test-click', el.innerHTML);
+}
+
+let elements = document.getElementsByTagName("h2");
+for (i=0; i < elements.length; i++) {
+    let el = elements[i];
+    el.addEventListener("click", () => analyticsClickListener(el));
+}
+```
+
+To test if your event tracking is working properly, go to **Real-Time -> Events**. Every time the `ga()` function is called with `'send'` and '`event`' as parameters, you should see an event popping on the **Real-Time** report.
+
+For more on event tracking, go to [Google's official documentation](https://developers.google.com/analytics/devguides/collection/analyticsjs/events).
 
 
 ## Lastly, and most importantly, filter out your own IP
@@ -175,3 +203,5 @@ Test that you don't show up anymore on the **Real-Time** report. If so, you're a
 
 ## Finding extra help
 Back in 2013, Google launched the new version of Analytics called Universal Analytics (UA). The old one was the ga.js and is now flagged as legacy. All of Google's official docs for ga.js have a warning, but you might find older StackOverflow answers that are about ga.js. Make sure you're looking at the right version before trying to implement the answer you're looking at.
+
+Once again, ga.js is the legacy version, while `ga()` is the valid function available to you.
