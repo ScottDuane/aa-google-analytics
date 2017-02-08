@@ -41,7 +41,7 @@ You can create one property for each project if you want to. Just keep in mind t
 * you'll have to check 3 separate reports (FS, JS and Flex) if you want to see if a copmany you applied for clicked on any of your projects;
 * Google limits the number of properties to 50 per account (kudos to you if you hit that limit)
 
-For our purposes, we will keep all of our sites (FS, JS and flex projects) under one single property, since it's easier to track.
+For our purposes, we will keep all of our sites (FS, JS and flex projects) under one single property, since it's easier to track. The downside of this is that all your home pages (portfolio, FS, JS, flex etc) will be listed under `"/"` by default. But we can easily change the report to show us the page title instead of the page URL.
 
 ## Important interface pieces
 Every time you land on the Google Analytics page, you will see an accounts list that has the page you just registered, as well as 4 tabs: 
@@ -71,6 +71,7 @@ As you start seeing numbers increase, it is important to know what these numbers
 * **% new sessions**- first time users visiting your website compared to visitors who have previously visited your site
 
 
+<a name="utm_params"></a>
 #### 2) **Acquisition:** Where did people come from? This is where we'll see if that recruiter from Google visited your site.
 We'll be leveraging **utm** parameters to help us track who's going to our sites. UTM's are parameters that you append to a site's URL that look like this:
 
@@ -85,8 +86,6 @@ Here's one way to use these params. You're welcome to use them in any another wa
 * **utm_campaign, utm_term:** We won't be using these, but feel free to do so if you find it necessary. For example, you can use `utm_term` for the position title you're applying to.
 
 #### 3) **Behavior:** Info on where are users going after they land, what are they clicking, which pages are being visited
-
-
 
 
 ## <a name="implementation"></a> How to Install and Set Up Google Analytics for your FSP/Javascript/Flex:
@@ -118,16 +117,49 @@ Click on the **Reporting** tab. Then expand the **Real-Time** section and click 
 
 **If you're still having issues, grab the [Tag Assistant](https://chrome.google.com/webstore/detail/tag-assistant-by-google/kejbdjndbnbjgmefkgdddjlbokphdefk?hl=en) Chrome extension to help you debug the problem.**
 
-## Tracking a job application
+## Second step: set the date range
+Analytics does a good job of always updating the data range of your report to include the last full day. Still, you should always check the range you're looking at, so you're not missing out on anything.
+* Look for the data picker on the top right and open it up;
+* Your first click selects the 'from'. The second selected the 'to';
+* Hit **Apply** and let's have some fun.
+
+## Tracking job applications
 So now that we have it all set up, it's time to send some applications.
 First, let's build our URL. Notice that you should do this only once, and then copy-paste on other applications, changing only the `utm_content` or whatever parameter you're using to specify the company you're applying for.
 
 * Go to [https://ga-dev-tools.appspot.com/campaign-url-builder/](https://ga-dev-tools.appspot.com/campaign-url-builder/) and fill out the small form;
-* Grab the resulting link and put it on your application.
+    * If you're not sure on what those fields mean, go back and read about [UTM params](#utm_params);
+* Grab the resulting link and use it on your application.
 
-**@@@@ TALK ABOUT UTM @@@@**
+Analytics only logs the UTM params when a visit happens, so wait until the next day to check the reports. You have a couple of options on what to see:
 
-## Filter out your own IP
+### I don't care which page they viewed, I just want to see if they clicked on my link
+* Go to **Acquisition -> All Traffic -> Source/Medium**. You should see basic **Source/Medium** information.
+* If you also set `utm_content` and `utm_term`, click on **Secondary dimension** (right above the table headers) and search for:
+    * Ad Content = `utm_content`
+    * Search Term = `utm_term`
+
+Soon enough, you'll start seeing some interesting results:
+
+![Source/Medium + Content](./images/ga_source_medium_content.jpg)
+
+If you don't see a **Source/Medium** that you're looking for, it means that no one visited that link (assuming that you set everything up correctly).
+
+### Cool, now I want to see the pages themselves
+* Let's go to **Behavior -> Site Content -> All Pages**;
+* Change the **Primary Dimension** to **Page Title** (otherwise all home pages will be displayed as `"/"`);
+* Select **Source/Medium**, **Ad Content** or **Search Term** as the secondary dimension;
+
+
+## Tracking events (clicks, keystrokes etc)
+Now that you see who is coming to your site/app, it's time to see what are they clicking on. To do that, we'll use Analytics' `ga()` function.
+
+**DO NOT CONFUSE `ga()` WITH `ga.js`. The first is the function and the second is the old version of Analytics. The version being used nowadays is called `analytics.js`**
+
+
+
+
+## Lastly, and most importantly, filter out your own IP
 Now that everything is set up, we can filter out our own IP. Don't forget to filter out both a/A's, your own home's IP and whatever other IP you work from:
 * Go to the **Admin** tab;
 * Under **View**, select **Filters** and then **+ ADD FILTER**;
