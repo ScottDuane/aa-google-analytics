@@ -102,7 +102,7 @@ Setting up GA boils down to adding a JS snippet to your site:
 * The snippets executes asynchronously, so it won't impact your page's performance.
 * For more help, you can check out the [official Google docs](https://support.google.com/analytics/answer/1008080?hl=en).
 
-That snippet will create a function calld `ga()`, which will be available for you as an API.
+That snippet will create a function calld `ga()`, which will be available for you as an API and will be used when setting up event tracking.
 
 At a basic level, when a visitor enters the page, the snippet loads and automaticaly calls that function, passing in a `pageview` as a parameter, making GA log that visit.
 
@@ -119,20 +119,22 @@ Click on the **Reporting** tab. Then expand the **Real-Time** section and click 
 **If you're still having issues, grab the [Tag Assistant](https://chrome.google.com/webstore/detail/tag-assistant-by-google/kejbdjndbnbjgmefkgdddjlbokphdefk?hl=en) Chrome extension to help you debug the problem.**
 
 ## Second step: set the date range
-Analytics does a good job of always updating the data range of your report to include the last full day. Still, you should always check the range you're looking at, so you're not missing out on anything.
+Analytics does a good job of always updating the date range of your report to include the last full day. Still, you should always check the range you're looking at, so you're not missing out on anything.
 * Look for the data picker on the top right and open it up;
-* Your first click selects the 'from'. The second selected the 'to';
+* Your first click selects the 'from'. The second selects the 'to';
 * Hit **Apply** and let's have some fun.
 
 ## Tracking job applications
 So now that we have it all set up, it's time to send some applications.
-First, let's build our URL. Notice that you should do this only once, and then copy-paste on other applications, changing only the `utm_content` or whatever parameter you're using to specify the company you're applying for.
+First, let's build our URL. It's just a matter of concatenating a bunch of parameters to the URL. You can do it manually or you can use Google's own tool:
 
 * Go to [https://ga-dev-tools.appspot.com/campaign-url-builder/](https://ga-dev-tools.appspot.com/campaign-url-builder/) and fill out the small form;
     * If you're not sure on what those fields mean, go back and read about [UTM params](#utm_params);
 * Grab the resulting link and use it on your application.
 
-Analytics only logs the UTM params when a visit happens, so wait until the next day to check the reports. You have a couple of options on what to see:
+Analytics only logs the UTM params when a visit happens, so wait until the next day to check the reports. You can test it going to **Real-Time -> Traffic Sources**.
+
+You have a couple of options on what to see:
 
 ### I don't care which page they viewed, I just want to see if they clicked on my link
 * Go to **Acquisition -> All Traffic -> Source/Medium**. You should see basic **Source/Medium** information.
