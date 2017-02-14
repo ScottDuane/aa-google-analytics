@@ -56,11 +56,9 @@ Every time you land on the Google Analytics page, you will see an accounts list 
 You might see a big spike in usage all of a sudden. That might be you, working on a fix or new feature.
 To counter that, GA allows us to filter traffic by IP. That will be our last step, as it's important to keep us unfiltered while we test the tracking code we'll be setting up.
 
-### Audience overview, Acquisition overview, Behavior overview
-[Watch This Video](https://www.youtube.com/watch?v=xZbd_yEN5nE) (9:16)  
+### Audience, Acquisition and Behavior overviews
+[Watch This Video](https://www.youtube.com/watch?v=xZbd_yEN5nE) (9:16) 
 
-We'll be focusing on 3 areas:
-#### 1) Audience: Demographics, Browser, Mobile/Desktop and basic Behavior
 As you start seeing numbers increase, it is important to know what these numbers mean:
 
 * **Sessions**- a group of interactions that take place on your website within a given time frame. For example a single session may contain multiple screen or page views.
@@ -70,10 +68,17 @@ As you start seeing numbers increase, it is important to know what these numbers
 * **Bounce rate**- the percentage of single page visits (or web sessions). It is the number of visits in which a person leaves your website from the landing page without browsing any further.
 * **% new sessions**- first time users visiting your website compared to visitors who have previously visited your site
 
+We'll be going into 3 reports that focus on different things:
+
+#### 1) Audience: Demographics, Browser, Mobile/Desktop and basic Behavior
+The Audience reports focus on your visitors. Basically, it gives you an idea on who they are.
+
 Feel free to explore all sections under **Audience**. We won't be focusing on those, but it's good to know what's available to you.
 
 <a name="utm_params"></a>
 #### 2) **Acquisition:** Where did people come from? This is where we'll see if that recruiter from Google visited your site.
+The Acquisition reports are really useful for measuring Marketing campaigns. And since job searching is pretty much a Marketing campaign, we'll be using a couple of pieces from this report.
+
 We'll be leveraging **utm** parameters to help us track who's going to our sites. UTM's are parameters that you append to a site's URL, making it look like this:
 
 [https://www.appacademy.io?utm_source=github&utm_medium=google-analytics-reading](https://www.appacademy.io?utm_source=github&utm_medium=google-analytics-reading)
@@ -86,7 +91,12 @@ Here's one way to use these params. You're welcome to use them in any another wa
 * **utm_content** We'll use it to specify `company-name`, `recruiter-name` etc
 * **utm_campaign, utm_term:** We won't be using these, but feel free to do so if you find it necessary. For example, you can use `utm_term` for the position title you're applying to.
 
-#### 3) **Behavior:** Info on where are users going after they land, what are they clicking, which pages are being visited
+#### 3) **Behavior:** Info on where are users going after they land, what are they clicking on, which pages are being visited
+The Behavior reports focus on your pages and content.
+
+By default, we are able to see how people are flowing after landing on our page, but we can't really track how they interact with the page. In order to track these interactions (events such as clicks), we need to leverage the `ga()` API, calling it with some specific parameters. We'll see how to do that ahead.
+
+Now, let's get down to business.
 
 
 ## <a name="implementation"></a> How to Install and Set Up Google Analytics for your FSP/Javascript/Flex:
