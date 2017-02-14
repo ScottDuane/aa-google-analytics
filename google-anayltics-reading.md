@@ -4,12 +4,14 @@
 
 |What You Want to See|Getting There|
 |-|-|
+|Getting your Tracking snippet|Admin -> (*under property*) Tracking Info -> Tracking Code|
 |Test your tracking snippet|Real-Time -> Overview|
 |Test your UTM URLs|Real-Time -> Traffic Sources|
 |Test your events tracking|Real-Time -> Events|
 |Check your UTMs reports|Acquisition -> All Traffic -> Source/Medium|
 |How people are interacting with your page|Behavior -> Events -> Overview|
 |Are users interacting more than once?|Behavior -> Events -> Events Flow|
+|Which pages are people looking at?|Behavior -> Site Content -> All Pages *(change Primary Dimension to* `Page Title` *)*
 
 
 ## What is Google Analytics? Why should I spend 5 minutes to set it up?
@@ -240,6 +242,11 @@ Go to **Audience -> Technology -> Browser and OS**:
 * Change the Primary to **Screen Resolution** and check the top hits. Then see if your site is looking good on those sizes.
 
 Go to **Audience -> Mobile -> Overview** to see the percentage of desktop vs mobile. Again, you can select **Operating System** as Secondary Dimension for a more in-depth report.
+
+### Pages viewed
+**Behavior -> Site Content -> All Pages**
+
+If you're keeping everything under one Property, select `Page Title` as the primary dimension so you don't see `"/"` for all projects.
 
 ### User Flow
 **Audience -> User Flow**
