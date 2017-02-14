@@ -87,6 +87,8 @@ As you start seeing numbers increase, it is important to know what these numbers
 * **Bounce rate**- the percentage of single page visits (or web sessions). It is the number of visits in which a person leaves your website from the landing page without browsing any further.
 * **% new sessions**- first time users visiting your website compared to visitors who have previously visited your site
 
+**It's ok to have a high bounce rate**. A bounce is measured when a user comes in and leaves without any interaction or further step. This means that, even if someone comes in, stays on your page for 10 minutes and then leaves, it gets counted as a bounce. There is a way to view how much time people are actually spending on your site. We'll get to that later.
+
 We'll be going into 3 reports that focus on different things:
 
 #### 1) Audience: Demographics, Browser, Mobile/Desktop and basic Behavior
@@ -247,6 +249,11 @@ Go to **Audience -> Mobile -> Overview** to see the percentage of desktop vs mob
 **Behavior -> Site Content -> All Pages**
 
 If you're keeping everything under one Property, select `Page Title` as the primary dimension so you don't see `"/"` for all projects.
+
+### Time people spent on your site
+**Audience -> Behavior -> Engagement**
+
+Even though your bounce rate might be high, you should be able to see here how much time people are actually spending on your page.
 
 ### User Flow
 **Audience -> User Flow**
