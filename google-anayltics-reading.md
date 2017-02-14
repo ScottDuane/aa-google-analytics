@@ -1,6 +1,6 @@
 # Google Analytics Walkthrough
 
-## Quick reports paths
+## Quick report paths
 
 |What You Want to See|Getting There|
 |-|-|
@@ -10,7 +10,6 @@
 |Check your UTMs reports|Acquisition -> All Traffic -> Source/Medium|
 |How people are interacting with your page|Behavior -> Events -> Overview|
 |Are users interacting more than once?|Behavior -> Events -> Events Flow|
-
 
 
 ## What is Google Analytics? Why should I spend 5 minutes to set it up?
@@ -68,6 +67,11 @@ Every time you land on the Google Analytics page, you will see an accounts list 
 ### You are noise
 You might see a big spike in usage all of a sudden. That might be you, working on a fix or new feature.
 To counter that, GA allows us to filter traffic by IP. That will be our last step, as it's important to keep us unfiltered while we test the tracking code we'll be setting up.
+
+### Pay attention to the Primary and Secondary Dimensions
+On most reports, you can change the **Primary Dimension**, which is the first column in the table. You can also add a **Secondary Dimension** to break the information a bit more. Feel free to play with those choices to see data from different perspectives.
+
+![Primary and Secondary Dimensions selectors](images/dimensions.jpg)
 
 ### Audience, Acquisition and Behavior overviews
 [Watch This Video](https://www.youtube.com/watch?v=xZbd_yEN5nE) (9:16) 
@@ -228,6 +232,29 @@ Make sure you get the correct public IP. Just Google "what's my ip" and you shou
 
 Test that you don't show up anymore on the **Real-Time** report. If so, you're all set!
 
+## Some other interesting reports
+
+### Browser, OS and Mobile
+Go to **Audience -> Technology -> Browser and OS**:
+* You can select **Browser Version** as the Secondary Dimension;
+* Change the Primary to **Screen Resolution** and check the top hits. Then see if your site is looking good on those sizes.
+
+Go to **Audience -> Mobile -> Overview** to see the percentage of desktop vs mobile. Again, you can select **Operating System** as Secondary Dimension for a more in-depth report.
+
+### User Flow
+**Audience -> User Flow**
+
+This is one of the coolest graphs, showing you precisely where people are going. You can change the main dimension from **Country** to **Source/Medium**, for example, and get this:
+
+![User Flow](images/user-flow.jpg)
+
+There is a catch though: all nodes (green rectangles) are displayed as URL. If you keep all your sites under one property, all home pages will be displayed as `"/"`, which might not be very helpful. In any case, mouse over the graph and click around to see how you can interact with it.
+
+### Event Flow
+**Behavior -> Events -> Event Flow**
+
+Like the User Flow, but this time the nodes represent events. Here's an example of how it might look, with **Ad Content** as the main dimension:
+![Event Flow](images/event-flow.jpg)
 
 ## Finding extra help
 Back in 2013, Google launched the new version of Analytics called Universal Analytics (UA). The old one was the ga.js and is now flagged as legacy. All of Google's official docs for ga.js have a warning, but you might find older StackOverflow answers that are about ga.js. Make sure you're looking at the right version before trying to implement the answer you're looking at.
