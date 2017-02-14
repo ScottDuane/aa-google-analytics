@@ -1,5 +1,18 @@
 # Google Analytics Walkthrough
 
+## Quick reports paths
+
+|What You Want to See|Getting There|
+|-|-|
+|Test your tracking snippet|Real-Time -> Overview|
+|Test your UTM URLs|Real-Time -> Traffic Sources|
+|Test your events tracking|Real-Time -> Events|
+|Check your UTMs reports|Acquisition -> All Traffic -> Source/Medium|
+|How people are interacting with your page|Behavior -> Events -> Overview|
+|Are users interacting more than once?|Behavior -> Events -> Events Flow|
+
+
+
 ## What is Google Analytics? Why should I spend 5 minutes to set it up?
 * It is a web traffic tracking system built by Google that is completely <b>FREE</b>
 * Just create an account and put a piece of JavaScript tracking code into your site and it will run with every page of your site
@@ -156,6 +169,10 @@ Soon enough, you'll start seeing some interesting results:
 
 ![Source/Medium + Content](./images/ga_source_medium_content.jpg)
 
+You will also get some values that you didn't set, Two main ones are:
+* `{someValue}/referral`, which is set when GA is able to get the site that referred the link;
+* `(direct)/(none)`, which happens when a user types the URL directly or there's no `utm_param` set up on the link they clicked on and GA can't get the referrer for any reason;
+
 If you don't see a **Source/Medium** that you're looking for, it means that no one visited that link (assuming that you set everything up correctly).
 
 ### Cool, now I want to see the pages themselves
@@ -210,7 +227,6 @@ Now that everything is set up, we can filter out our own IP. Don't forget to fil
 Make sure you get the correct public IP. Just Google "what's my ip" and you should see it.
 
 Test that you don't show up anymore on the **Real-Time** report. If so, you're all set!
-
 
 
 ## Finding extra help
