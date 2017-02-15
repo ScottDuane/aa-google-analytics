@@ -48,20 +48,20 @@ For 6 weeks, we tracked students’ full stack projects and these were the resul
 ## GA's basic structure
 There are 3 parts to a Google Analytics account:
 * **Account:** You should have only one of these;
-* **Property:** The sites you'll register. If you have more than one site that you want to track, and you want to track them sepeprately, you should create two separate properties. **Each property has its own tracking ID and snippet.**
-* **View:** The information that gets displayed to you. For example, if you have two sites that don't need to be in different properties, you can instead create two views: one that displays data for curie.cats.com and the other for markov.cats.com. Make sure you always have one for "All Web Site Data", so you can have a broader picture of your site's usage.
+* **Property:** The sites you'll register. If you have more than one site that you want to track, and you want to track them separately, you should create two separate properties. **Each property has its own tracking ID and snippet.**
+* **View:** The information that gets displayed to you. For example, if you have two sites that don't need to be in different properties, you can instead create two views: one that displays data for curie.cats.com and the other for markov.cats.com. Make sure you always have one for "All Web Site Data", so you can have a broader picture of your sites' usage.
 
 You can create one property for each project if you want to. Just keep in mind that:
-* you'll have to check 3 separate reports (FS, JS and Flex) if you want to see if a copmany you applied for clicked on any of your projects;
+* you'll have to check 3 separate reports (FS, JS and Flex) if you want to see if a company you applied for clicked on any of your projects;
 * Google limits the number of properties to 50 per account (kudos to you if you hit that limit)
 
 For our purposes, we will keep all of our sites (FS, JS and flex projects) under one single property, since it's easier to track. The downside of this is that all your home pages (portfolio, FS, JS, flex etc) will be listed under `"/"` by default. But we can easily change the report to show us the page title instead of the page URL.
 
 ## Important interface pieces
-Every time you land on the Google Analytics page, you will see an accounts list that has the page you just registered, as well as 4 tabs: 
+Every time you land on the Google Analytics page, you will see an accounts list that has the page you just registered, as well as 4 tabs:
 * **Home**: Displays the accounts and sites you have;
 * **Reporting**: The main reporting area, where are the graphs and stats are displayed;
-* **Customization**: You can build customized reports from here. We will no be covering this section;
+* **Customization**: You can build customized reports from here. We will not be covering this section;
 * **Admin**: Where you view the settings of your whole account (Account, Property and View).
 
 ## Analyzing your web traffic
@@ -76,7 +76,7 @@ On most reports, you can change the **Primary Dimension**, which is the first co
 ![Primary and Secondary Dimensions selectors](images/dimensions.jpg)
 
 ### Audience, Acquisition and Behavior overviews
-[Watch This Video](https://www.youtube.com/watch?v=xZbd_yEN5nE) (9:16) 
+[Watch This Video](https://www.youtube.com/watch?v=xZbd_yEN5nE) (9:16)
 
 As you start seeing numbers increase, it is important to know what these numbers mean:
 
@@ -112,7 +112,7 @@ Here's one way to use these params. You're welcome to use them in any another wa
 * **utm_content** We'll use it to specify `company-name`, `recruiter-name` etc
 * **utm_campaign, utm_term:** We won't be using these, but feel free to do so if you find it necessary. For example, you can use `utm_term` for the position title you're applying to.
 
-#### 3) **Behavior:** Info on where are users going after they land, what are they clicking on, which pages are being visited
+#### 3) **Behavior:** Info on where users are going after they land, what they are clicking on, which pages they are visiting
 The Behavior reports focus on your pages and content.
 
 By default, we are able to see how people are flowing after landing on our page, but we can't really track how they interact with the page. In order to track these interactions (events such as clicks), we need to leverage the `ga()` API, calling it with some specific parameters. We'll see how to do that ahead.
@@ -135,7 +135,7 @@ Setting up GA boils down to adding a JS snippet to your site:
 
 That snippet will create a function calld `ga()`, which will be available for you as an API and will be used when setting up event tracking.
 
-At a basic level, when a visitor enters the page, the snippet loads and automaticaly calls that function, passing in a `pageview` as a parameter, making GA log that visit.
+At a basic level, when a visitor enters the page, the snippet loads and automatically calls that function, passing in a `pageview` as a parameter, making GA log that visit.
 
 Now that the snippet is set up, let's make sure it's working properly.
 
