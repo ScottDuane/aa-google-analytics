@@ -24,7 +24,7 @@
 <b>B:</b> Am I creating content that is aesthetically appealing and easy to use for recruiters? <br>
 <b>C:</b> Do I need to improve my site to increase callbacks from recruiters?
 
-Google Analytics **does not** naturaly tell you who the person accessing your site is.  All information is anonymized bfore being displayed, so you can not view visits by IP or any other identifiable information. There are ways around that and we'll cover them ahead.
+Google Analytics **does not** naturaly tell you who the person accessing your site is.  All information is anonymized before being displayed, so you can not view visits by IP or any other identifiable information. There are ways around that and we'll cover them ahead.
 
 If you want to jump straight to implementation and figure out as you go, [go for it](#implementation).
 
