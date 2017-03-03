@@ -2,16 +2,16 @@
 
 ## Quick report paths
 
-|What You Want to See|Getting There|
-|-|-|
-|Getting your Tracking snippet|Admin -> (*under property*) Tracking Info -> Tracking Code|
-|Test your tracking snippet|Real-Time -> Overview|
-|Test your UTM URLs|Real-Time -> Traffic Sources|
-|Test your events tracking|Real-Time -> Events|
-|Check your UTMs reports|Acquisition -> All Traffic -> Source/Medium|
-|How people are interacting with your page|Behavior -> Events -> Overview|
-|Are users interacting more than once?|Behavior -> Events -> Events Flow|
-|Which pages are people looking at?|Behavior -> Site Content -> All Pages *(change Primary Dimension to* `Page Title` *)*
+| What You Want to See                      | Getting There                                                                         |
+| ----------------------------------------- | ------------------------------------------------------------------------------------- |
+| Getting your Tracking snippet             | Admin -> (*under property*) Tracking Info -> Tracking Code                            |
+| Test your tracking snippet                | Real-Time -> Overview                                                                 |
+| Test your UTM URLs                        | Real-Time -> Traffic Sources                                                          |
+| Test your events tracking                 | Real-Time -> Events                                                                   |
+| Check your UTMs reports                   | Acquisition -> All Traffic -> Source/Medium                                           |
+| How people are interacting with your page | Behavior -> Events -> Overview                                                        |
+| Are users interacting more than once?     | Behavior -> Events -> Events Flow                                                     |
+| Which pages are people looking at?        | Behavior -> Site Content -> All Pages *(change Primary Dimension to* `Page Title` *)* |
 
 
 ## What is Google Analytics? Why should I spend 5 minutes to set it up?
@@ -40,7 +40,7 @@ For 6 weeks, we tracked students’ full stack projects and these were the resul
 ## Case Study:
 * A student added google analytics on her flex project during the time period of July 27-August 18, 2016.
 * Her project was a video game stats website for Destiny. She shared the link on Reddit and it gained a lot of traction in the video game community resulting in the numbers you see below!
-* Since her website gained such popularity, she was able to track many things about visitors to the website, where they were coming from, and how long they stayed on the site. She was even featured on GameRant. Check out her flex project [here] (https://destiny-data.herokuapp.com/#/?_k=jy5wf6).  
+* Since her website gained such popularity, she was able to track many things about visitors to the website, where they were coming from, and how long they stayed on the site. She was even featured on GameRant. Check out her flex project [here] (https://destiny-data.herokuapp.com/#/?_k=jy5wf6).
 * Although most projects don’t attract this high a volume of users, this data may be useful to demonstrate how Google analytics is useful.
 
 [Screenshot of her Google Analytics](http://imgur.com/a/KWL3h)
@@ -58,7 +58,7 @@ You can create one property for each project if you want to. Just keep in mind t
 For our purposes, we will keep all of our sites (FS, JS and flex projects) under one single property, since it's easier to track. The downside of this is that all your home pages (portfolio, FS, JS, flex etc) will be listed under `"/"` by default. But we can easily change the report to show us the page title instead of the page URL.
 
 ## Important interface pieces
-Every time you land on the Google Analytics page, you will see an accounts list that has the page you just registered, as well as 4 tabs: 
+Every time you land on the Google Analytics page, you will see an accounts list that has the page you just registered, as well as 4 tabs:
 * **Home**: Displays the accounts and sites you have;
 * **Reporting**: The main reporting area, where are the graphs and stats are displayed;
 * **Customization**: You can build customized reports from here. We will no be covering this section;
@@ -76,7 +76,7 @@ On most reports, you can change the **Primary Dimension**, which is the first co
 ![Primary and Secondary Dimensions selectors](images/dimensions.jpg)
 
 ### Audience, Acquisition and Behavior overviews
-[Watch This Video](https://www.youtube.com/watch?v=xZbd_yEN5nE) (9:16) 
+[Watch This Video](https://www.youtube.com/watch?v=xZbd_yEN5nE) (9:16)
 
 As you start seeing numbers increase, it is important to know what these numbers mean:
 
