@@ -2,16 +2,16 @@
 
 ## Quick report paths
 
-|What You Want to See|Getting There|
-|-|-|
-|Getting your Tracking snippet|Admin -> (*under property*) Tracking Info -> Tracking Code|
-|Test your tracking snippet|Real-Time -> Overview|
-|Test your UTM URLs|Real-Time -> Traffic Sources|
-|Test your events tracking|Real-Time -> Events|
-|Check your UTMs reports|Acquisition -> All Traffic -> Source/Medium|
-|How people are interacting with your page|Behavior -> Events -> Overview|
-|Are users interacting more than once?|Behavior -> Events -> Events Flow|
-|Which pages are people looking at?|Behavior -> Site Content -> All Pages *(change Primary Dimension to* `Page Title` *)*
+| What You Want to See                      | Getting There                                                                         |
+| ----------------------------------------- | ------------------------------------------------------------------------------------- |
+| Getting your Tracking snippet             | Admin -> (*under property*) Tracking Info -> Tracking Code                            |
+| Test your tracking snippet                | Real-Time -> Overview                                                                 |
+| Test your UTM URLs                        | Real-Time -> Traffic Sources                                                          |
+| Test your events tracking                 | Real-Time -> Events                                                                   |
+| Check your UTMs reports                   | Acquisition -> All Traffic -> Source/Medium                                           |
+| How people are interacting with your page | Behavior -> Events -> Overview                                                        |
+| Are users interacting more than once?     | Behavior -> Events -> Events Flow                                                     |
+| Which pages are people looking at?        | Behavior -> Site Content -> All Pages *(change Primary Dimension to* `Page Title` *)* |
 
 
 ## What is Google Analytics? Why should I spend 5 minutes to set it up?
@@ -40,7 +40,7 @@ For 6 weeks, we tracked students’ full stack projects and these were the resul
 ## Case Study:
 * A student added google analytics on her flex project during the time period of July 27-August 18, 2016.
 * Her project was a video game stats website for Destiny. She shared the link on Reddit and it gained a lot of traction in the video game community resulting in the numbers you see below!
-* Since her website gained such popularity, she was able to track many things about visitors to the website, where they were coming from, and how long they stayed on the site. She was even featured on GameRant. Check out her flex project [here] (https://destiny-data.herokuapp.com/#/?_k=jy5wf6).  
+* Since her website gained such popularity, she was able to track many things about visitors to the website, where they were coming from, and how long they stayed on the site. She was even featured on GameRant. Check out her flex project [here] (https://destiny-data.herokuapp.com/#/?_k=jy5wf6).
 * Although most projects don’t attract this high a volume of users, this data may be useful to demonstrate how Google analytics is useful.
 
 [Screenshot of her Google Analytics](http://imgur.com/a/KWL3h)
