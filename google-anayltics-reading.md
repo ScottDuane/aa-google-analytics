@@ -1,5 +1,7 @@
 # Google Analytics Walkthrough
 
+[**Video Demo**](https://vimeo.com/204210467) (password: go_video_go)
+
 ## Quick report paths
 
 | What You Want to See                      | Getting There                                                                         |
